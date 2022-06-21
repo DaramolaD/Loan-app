@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loan App calculator</title>
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+
+<body>
+  
+  <section class="section">
+    <div class="container">
+      <div class="content">
+        <h1>Simple Loan Calculator</h1>
+        <p>
+          This Simple Loan Calculator will determine your estimated payments for loan amounts, interests rate and terms
+        </p>
+      </div>
+      
+      <div class="columns">
+        <div class="columns in-three-quarters">
+          <div class="card">
+            <div class="card-content">
+              <form id="loan-form">
+                <div class="level">
+                  <!-- left-side -->
+                  <div class="level-left is-marginless">
+                    <div class="level-item">
+                      <p class="number">1</p>
+                      Loan Amount
+                    </div>
+                  </div>
+                  
+                  <!-- Right-side -->
+                  <div class="level-right">
+                    <div class="level-item">
+                      <div class="field">
+                        <div class="control has-icons-left">
+                          <input type="number" class="input" id="amount">
+                          <span class="icon is-small is-left"><i class="fa fa-dollar-sign"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="level">
+                  <!-- left-side -->
+                  <div class="level-left is-marginless">
+                    <div class="level-item">
+                      <p class="number">2</p>
+                      Interest Rate
+                    </div>
+                  </div>
+                  
+                  <!-- Right-side -->
+                  <div class="level-right">
+                    <div class="level-item">
+                      <div class="field">
+                        <div class="control has-icons-right">
+                          <input type="number" class="input" id="interest">
+                          <span class="icon is-small is-right"><i class="fa fa-percentage"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                
+                <div class="level">
+                  <!-- left-side -->
+                  <div class="level-left is-marginless">
+                    <div class="level-item">
+                      <p class="number">3</p>
+                      Numbers Of Years
+                    </div>
+                  </div>
+                  
+                  <!-- Right-side -->
+                  
+                  <div class="level-right">
+                    <div class="level-item">
+                      <div class="field">
+                        <div class="control has-icons-left">
+                          <input type="number" class="input" id="years">
+                          <span class="icon is-small is-left"><i class="fa fa-calender"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="control">
+                  <button class="buttom is-large is-fullwidth is-primary is-outlined">
+                    Calculate
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- RESULTS -->
+  <section class="section">
+    <h1 class="title">Calculated Results</h1>
+    
+    <div class="columns is-outline">
+      
+      <div class="column is-12-tablet is-6-desktop is-3-widescreen">
+        <div class="notification is-primary has-text">
+          <p id="monthlyPayment" class="title is-1">&#36;</p>
+          <p class="subtitle is-4">Monthly Payments</p>
+        </div>
+        
+      </div>
+    
+      <div class="column is-12-tablet is-6-desktop is-3-widescreen">
+        <div class="notification is-info has-text">
+          <p id="totalInterest" class="title is-1">&#36;</p>
+          <p class="subtitle is-4">Total Interest</p>
+        </div>
+      </div>
+    
+      <div class="column is-12-tablet is-6-desktop is-3-widescreen">
+        <div class="notification is-link has-text">
+          <p id="totalPayment" class="title is-1">&#36;</p>
+          <p class="subtitle is-4">Total Amount</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- Project -->
+  <script src="./app.js"></script>
+</body>
+</html>
